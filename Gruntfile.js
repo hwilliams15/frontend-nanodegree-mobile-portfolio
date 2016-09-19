@@ -110,6 +110,7 @@ module.exports = function(grunt) {
     });
   });
 
+  grunt.loadNpmTasks('grunt-ngrok');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
