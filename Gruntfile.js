@@ -43,8 +43,8 @@ module.exports = function(grunt) {
     },
     shell: {
       minify_inline_css: {
-        command: 'html-minifier --collapse-whitespace --minify-css '+
-        'remove-comments --input-dir . --file-ext html --output-dir dist'
+        command: 'html-minifier --collapse-whitespace --minify-css --minify-js'+
+        ' --remove-comments --input-dir . --file-ext html --output-dir dist'
       }
     },
     htmlmin: {
