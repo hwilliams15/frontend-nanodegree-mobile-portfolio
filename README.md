@@ -10,6 +10,9 @@ Please use the dist directory to run the application.
 * To use ngrok, first install dependencies by running ```npm install``` in the root folder of the project.
 * Run ngrok: ```node_modules/ngrok/bin/ngrok http 8080``` Use the output URL for PageSpeed Insights and append dist/index.html. For example, http://54f3a59c.ngrok.io/dist/index.html
 
+### Grunt
+* To rebuild dist directory with Grunt, just type grunt in the root folder of the project.
+
 ### Index.html Optimizations
 The following optimizations were made.
 
