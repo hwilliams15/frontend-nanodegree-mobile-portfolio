@@ -7,7 +7,8 @@ Please use the dist directory to run the application.
 * You can now go to http://localhost:8080/dist/index.html
 
 ### Ngrok
-To use ngrok, run ngrok: ```node_modules/ngrok/bin/ngrok http 8080``` Use the output URL for PageSpeed Insights and append dist/index.html. For example, http://54f3a59c.ngrok.io/dist/index.html
+* To use ngrok, first install dependencies by running ```npm install``` in the root folder of the project.
+* Run ngrok: ```node_modules/ngrok/bin/ngrok http 8080``` Use the output URL for PageSpeed Insights and append dist/index.html. For example, http://54f3a59c.ngrok.io/dist/index.html
 
 ### Index.html Optimizations
 The following optimizations were made.
@@ -36,12 +37,12 @@ phaseValues.push(100*Math.sin(scrollTopAdjustVal + i));
 ```
 
 ### Resize pizzas
-* Resize pizza is just setting the width of the pizza to be a percentage of the window width. All the other stuff is not needed and overly complicated. I just used the provided size switcher function and multiplied by the window width.
+* Resize pizza is just setting the width of the pizza to be a percentage of the window width. All the other stuff is not needed and overly complicated. THe provided sizeSwitcher function is multiplied by the window width to get the new pizza width.
 ```javascript
 var newWidth = sizeSwitcher(size) * windowWidth + 'px';
 ```
-* I also removed retrieving the random pizzas selector out of the for loop which hurts performance. 
-* I took retrieval of the offsetWidth outside of the for loop which causes layout.
+* Retrieving the random pizzas inside the for loop hurts performance. This was done before entering the loop.
+* offsetWidth is a call which causes layout. It was being called every iteration of the loop. This was moved to a variable before entering the loop.
 ```javascript
 var windowWidth = document.querySelector("#randomPizzas").offsetWidth;
 ```
