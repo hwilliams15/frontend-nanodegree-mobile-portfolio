@@ -21,7 +21,7 @@ The following optimizations were made.
 * A viewport meta tag was added.
 * A smaller pizzeria image for the page was created.
 
-### Main.js Optimization
+### Main.js Optimizations
 * The style.left update was removed in favor of the CSS transform call.
 * There was no need to reposition 200 pizzas. Only a few are shown on the screen at any point in time. The number of pizzas to create is decided by doing a calculation with the height of the page and the height of the pizzas.
 ```javascript
@@ -36,8 +36,8 @@ phaseValues.push(100*Math.sin(scrollTopAdjustVal + i));
   }
 ```
 
-### Resize pizzas
-* Resize pizza is just setting the width of the pizza to be a percentage of the window width. All the other stuff is not needed and overly complicated. THe provided sizeSwitcher function is multiplied by the window width to get the new pizza width.
+### Resize Pizzas Optimizations
+* Resize pizza is just setting the width of the pizza to be a percentage of the window width. All the other stuff is not needed and overly complicated. The provided sizeSwitcher function is multiplied by the window width to get the new pizza width.
 ```javascript
 var newWidth = sizeSwitcher(size) * windowWidth + 'px';
 ```
